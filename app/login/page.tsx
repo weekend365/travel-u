@@ -1,16 +1,46 @@
-import React from "react";
+"use client";
 
-function login() {
+import Link from "next/link";
+import React, { useState } from "react";
+import { signIn, signOut, useSession } from "next-auth/react";
+
+function Login() {
+  const { data: session } = useSession();
+
+  const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <>
       <div className="flex flex-col justify-center items-center min-h-screen">
-        <a href="/">Travel U</a>
-        <input type="text" placeholder="id" />
-        <input type="text" placeholder="password" />
-        <button>login</button>
+        <Link href="/">
+          <div className="text-2xl">
+            <span className="mr-1">Travel</span>
+            <span className="text-alizarin">U</span>
+          </div>
+        </Link>
+        <input className="border" type="text" placeholder="아이디" value={id} />
+        <input
+          className="border"
+          type="text"
+          placeholder="비밀번호"
+          value={password}
+        />
+        <button
+          onClick={() => signIn()}
+          className="rounded-md bg-belizeHole hover:bg-peterRiver text-white px-2 py-1"
+        >
+          로그인
+        </button>
+        <button
+          onClick={() => signOut()}
+          className="rounded-md bg-belizeHole hover:bg-peterRiver text-white px-2 py-1"
+        >
+          로그아웃
+        </button>
       </div>
     </>
   );
 }
 
-export default login;
+export default Login;
