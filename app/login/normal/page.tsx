@@ -12,21 +12,26 @@ function Login() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center min-h-screen">
+      <div className="flex flex-col justify-center items-center min-h-screen mb-32">
         <Link href="/">
-          <div className="text-2xl">
+          <div className="font-bold text-2xl">
             <span className="mr-1">Travel</span>
             <span className="text-alizarin">U</span>
           </div>
         </Link>
-        <input className="border" type="text" placeholder="아이디" value={id} />
         <input
-          className="border"
+          className="border border-cono text-cono rounded-sm mb-2 px-2 py-1"
+          type="text"
+          placeholder="아이디"
+          value={id}
+        />
+        <input
+          className="border border-cono text-cono rounded-sm mb-2 px-2 py-1"
           type="text"
           placeholder="비밀번호"
           value={password}
         />
-        <button className="rounded-md bg-belizeHole hover:bg-peterRiver text-white px-2 py-1">
+        <button className="rounded-md bg-alizarin hover:bg-pomegranate text-white px-2 py-1">
           로그인
         </button>
       </div>

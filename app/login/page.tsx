@@ -21,18 +21,18 @@ function Login() {
         </Link>
         <button
           onClick={() => signIn("naver")}
-          className="text-xl font-bold rounded-md bg-naver text-white px-4 py-2 mb-2"
+          className="text-xl rounded-md bg-naver text-white px-4 py-2 mb-2"
         >
           네이버로 간편 로그인
         </button>
         <button
           onClick={() => signIn("kakao")}
-          className="text-xl font-bold rounded-md bg-kakao text-black px-4 py-2 mb-2"
+          className="text-xl rounded-md bg-kakao text-black px-4 py-2 mb-2"
         >
           카카오로 간편 로그인
         </button>
         <Link
-          className="font-bold text-xl border border-cono rounded-md bg-white hover:cursor-pointer text-black px-4 py-2 mb-2"
+          className="text-xl border border-cono rounded-md bg-white hover:cursor-pointer text-black px-4 py-2 mb-2"
           href="/login/normal"
         >
           이메일 또는 전화번호로 로그인
