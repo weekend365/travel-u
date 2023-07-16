@@ -33,6 +33,8 @@ module.exports = {
         silver: "#bdc3c7",
         cono: "#95a5a6",
         asbe: "#7f8c8d",
+        naver: "#2DB400",
+        kakao: "#FEE500",
       },
     },
   },

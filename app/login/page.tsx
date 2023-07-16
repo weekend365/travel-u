@@ -14,30 +14,35 @@ function Login() {
     <>
       <div className="flex flex-col justify-center items-center min-h-screen">
         <Link href="/">
-          <div className="text-2xl">
+          <div className="font-bold text-2xl mb-2">
             <span className="mr-1">Travel</span>
             <span className="text-alizarin">U</span>
           </div>
         </Link>
-        <input className="border" type="text" placeholder="아이디" value={id} />
-        <input
-          className="border"
-          type="text"
-          placeholder="비밀번호"
-          value={password}
-        />
         <button
-          onClick={() => signIn()}
-          className="rounded-md bg-belizeHole hover:bg-peterRiver text-white px-2 py-1"
+          onClick={() => signIn("naver")}
+          className="text-xl font-bold rounded-md bg-naver text-white px-4 py-2 mb-2"
         >
-          로그인
+          네이버로 간편 로그인
         </button>
         <button
-          onClick={() => signOut()}
-          className="rounded-md bg-belizeHole hover:bg-peterRiver text-white px-2 py-1"
+          onClick={() => signIn("kakao")}
+          className="text-xl font-bold rounded-md bg-kakao text-black px-4 py-2 mb-2"
         >
-          로그아웃
+          카카오로 간편 로그인
         </button>
+        <Link
+          className="font-bold text-xl border border-cono rounded-md bg-white hover:cursor-pointer text-black px-4 py-2 mb-2"
+          href="/login/normal"
+        >
+          이메일 또는 전화번호로 로그인
+        </Link>
+        <div>
+          <span className="mr-1">아직 계정이 없으신가요?</span>
+          <Link className="text-cono hover:cursor-pointer" href="/join">
+            회원가입
+          </Link>
+        </div>
       </div>
     </>
   );
