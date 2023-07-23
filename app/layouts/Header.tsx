@@ -29,7 +29,10 @@ function Header() {
             </button>
           </div>
         ) : (
-          <Link className="hover:text-alizarin font-bold text-lg" href="/login">
+          <Link
+            className="hover:text-alizarin font-bold text-lg"
+            href="/api/auth/signin"
+          >
             로그인
           </Link>
         )}
